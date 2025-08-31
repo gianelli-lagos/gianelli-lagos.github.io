@@ -37,7 +37,7 @@ Features floating course bubbles showing relevant coursework including:
 
 Feel free to reach out through:
 - **LinkedIn**: [My LinkedIn Profile](https://linkedin.com/in/gianellil)
-- **Email**: Click to copy my email address
+- **Email**: glagos@stevens.edu
 - **GitHub**: [My GitHub Profile](https://github.com/gianelli-lagos)
 
 ## 🚀 Live Site

@@ -11,6 +11,19 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+  /* Prevent zoom on double tap */
+  touch-action: manipulation;
+}
+
+/* Prevent horizontal scrolling and zoom issues on mobile */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  /* Ensure proper mobile rendering */
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .hash-span {

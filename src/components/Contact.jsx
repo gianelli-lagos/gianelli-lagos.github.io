@@ -87,7 +87,7 @@ const Contact = ({ darkMode }) => {
           className="relative"
         >
           {/* Business Card Background */}
-          <div className={`bg-primary dark:bg-carddark from-[#F1F5F9] to-[#E0F2FE] rounded-3xl border border-white/20 backdrop-blur-sm shadow-2xl ${isMobile ? 'p-6' : 'p-12'}`}>
+          <div className={`bg-primary dark:bg-carddark from-[#F1F5F9] to-[#E0F2FE] rounded-3xl border border-white/20 backdrop-blur-sm shadow-2xl ${isMobile ? 'p-6' : isLargePhone ? 'p-8' : 'p-12'}`}>
             {/* Name and Title */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}

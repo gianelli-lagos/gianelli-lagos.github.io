@@ -33,7 +33,7 @@ const Contact = ({ darkMode }) => {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 640);
+      setIsMobile(window.innerWidth <= 768);
     };
 
     checkScreenSize();
@@ -87,7 +87,7 @@ const Contact = ({ darkMode }) => {
           className="relative"
         >
           {/* Business Card Background */}
-          <div className={`bg-primary dark:bg-carddark from-[#F1F5F9] to-[#E0F2FE] rounded-3xl border border-white/20 backdrop-blur-sm shadow-2xl ${isMobile ? 'p-6' : isLargePhone ? 'p-8' : 'p-12'}`}>
+          <div className={`bg-primary dark:bg-carddark from-[#F1F5F9] to-[#E0F2FE] rounded-3xl border border-white/20 backdrop-blur-sm shadow-2xl ${isMobile ? 'p-6' : 'p-12'}`}>
             {/* Name and Title */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -108,13 +108,13 @@ const Contact = ({ darkMode }) => {
               className="flex justify-center items-center gap-16 mb-8"
               style={{ 
                 flexDirection: isMobile ? 'column' : 'row',
-                gap: isMobile ? '32px' : '64px'
+                gap: isMobile ? '24px' : '64px'
               }}
             >
               {contactLinks.map((contact, index) => (
                 <div key={contact.name} className="flex flex-col items-center gap-4">
                   <motion.div
-                    className="w-28 h-28"
+                    className={isMobile ? "w-20 h-20" : "w-28 h-28"}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1 + index * 0.2, duration: 0.6 }}

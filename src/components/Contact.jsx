@@ -75,29 +75,28 @@ const Contact = ({ darkMode }) => {
           className="relative"
         >
           {/* Business Card Background */}
-          <div className="bg-primary dark:bg-carddark from-[#F1F5F9] to-[#E0F2FE] rounded-3xl border border-white/20 backdrop-blur-sm shadow-2xl p-12">
+          <div className="bg-primary dark:bg-carddark from-[#F1F5F9] to-[#E0F2FE] rounded-3xl border border-white/20 backdrop-blur-sm shadow-2xl p-6 sm:p-8 lg:p-12">
             {/* Name and Title */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="text-center mb-12"
+              className="text-center mb-8 sm:mb-12"
             >
-              <h3 className="text-4xl font-bold text-slate-800 dark:text-secondarydark mb-3">
-                Gianelli Lagos {/* TODO: Replace with your actual name */}
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 dark:text-secondarydark mb-2 sm:mb-3">
+                Gianelli Lagos
               </h3>
-              <p className="text-slate-600 dark:text-secondarydark text-xl">
-                Software Engineer {/* TODO: Replace with your title */}
+              <p className="text-slate-600 dark:text-secondarydark text-lg sm:text-xl">
+                Software Engineer
               </p>
             </motion.div>
 
-            {/* Contact Balls */}
-            <div className="flex justify-center items-center gap-16 mb-8">
+            {/* Contact Balls - Responsive Layout */}
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-12 lg:gap-16 mb-6 sm:mb-8">
               {contactLinks.map((contact, index) => (
-                <div key={contact.name} className="flex flex-col items-center gap-4">
-                  {/* 3D Ball Canvas - Separate from click handler */}
+                <div key={contact.name} className="flex flex-col items-center gap-3 sm:gap-4">
                   <motion.div
-                    className="w-28 h-28"
+                    className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1 + index * 0.2, duration: 0.6 }}
@@ -107,10 +106,9 @@ const Contact = ({ darkMode }) => {
                       darkMode={darkMode}
                     />
                   </motion.div>
-
-                  {/* Label - Separate clickable element */}
+                  
                   <motion.button
-                    className="text-slate-700 dark:text-secondarydark font-semibold text-base px-4 py-2 rounded-full bg-white/70 dark:bg-tertiarydark border border-slate-300/50 dark:border-black100 shadow-sm cursor-pointer hover:bg-white/90 dark:hover:bg-black100 hover:shadow-md transition-all duration-200 relative"
+                    className="text-slate-700 dark:text-secondarydark font-semibold text-sm sm:text-base px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/70 dark:bg-tertiarydark border border-slate-300/50 dark:border-black100 shadow-sm cursor-pointer hover:bg-white/90 dark:hover:bg-black100 hover:shadow-md transition-all duration-200 relative min-w-[80px] sm:min-w-[100px]"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.3 + index * 0.2 }}
@@ -129,9 +127,9 @@ const Contact = ({ darkMode }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.8, duration: 0.6 }}
-              className="text-center"
+              className="text-center px-2 sm:px-0"
             >
-              <p className="text-slate-600 dark:text-secondarydark text-lg italic">
+              <p className="text-slate-600 dark:text-secondarydark text-base sm:text-lg italic">
                 "Building the future, one line of code at a time"
               </p>
             </motion.div>

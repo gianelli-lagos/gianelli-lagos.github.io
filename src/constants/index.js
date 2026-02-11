@@ -116,13 +116,14 @@ const experiences = [
     ],
   },
     {
-    title: "BTT AI Studio",
+    title: "AI Studio Fellow",
     company_name: "DXC Technology",
     icon: dxc,
     iconBg: "#E6DEDD",
     date: "August 2024 - December 2024",
     points: [
-      "Built RAG Chatbot for EU AI Act.",
+      "Developed a RAG-based chatbot using Cohere AI to provide accurate responses on EU AI Act compliance.",
+      "Integrated PDF data extraction, exploratory analysis, and retrieval-augmented generation techniques for effective information retrieval.",
       "This opportunity was gained through the Break Through Tech ML/AI program.",
       "Skills: NLP, LLM, RAG, Data Cleaning, Data Extraction, and Teamwork.",
     ],

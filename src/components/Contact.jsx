@@ -91,10 +91,10 @@ const Contact = ({ darkMode }) => {
               </p>
             </motion.div>
 
-            {/* Contact Balls - Pure CSS Responsive */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 mb-6 sm:mb-8">
+            {/* Contact Balls - Mobile Vertical, Desktop Horizontal */}
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-8 md:gap-12 lg:gap-16 mb-6 sm:mb-8">
               {contactLinks.map((contact, index) => (
-                <div key={contact.name} className="flex flex-col items-center gap-3 sm:gap-4 w-full sm:w-auto max-w-[120px] sm:max-w-none">
+                <div key={contact.name} className="flex flex-col items-center gap-3 sm:gap-4">
                   <motion.div
                     className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28"
                     initial={{ opacity: 0, y: 30 }}
@@ -108,7 +108,7 @@ const Contact = ({ darkMode }) => {
                   </motion.div>
 
                   <motion.button
-                    className="text-slate-700 dark:text-secondarydark font-semibold text-sm sm:text-base px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/70 dark:bg-tertiarydark border border-slate-300/50 dark:border-black100 shadow-sm cursor-pointer hover:bg-white/90 dark:hover:bg-black100 hover:shadow-md transition-all duration-200 relative min-w-[80px] sm:min-w-[100px]"
+                    className="text-slate-700 dark:text-secondarydark font-semibold text-sm sm:text-base px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/70 dark:bg-tertiarydark border border-slate-300/50 dark:border-black100 shadow-sm cursor-pointer hover:bg-white/90 dark:hover:bg-black100 hover:shadow-md transition-all duration-200 whitespace-nowrap"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.3 + index * 0.2 }}

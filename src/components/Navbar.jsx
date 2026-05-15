@@ -5,7 +5,7 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 
-import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { BsFillMoonStarsFill, BsFillSunFill} from 'react-icons/bs';
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [active, setActive] = useState("");
@@ -52,13 +52,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         </Link>
 
         {/* Accessing Navlinks from index.js */}
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden sm:flex flex-row gap-10 items-center'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } text-secondary dark:text-white hover:text-white dark:hover:text-gray-400 text-[18px] font-medium cursor-pointer`}
+              className={"text-secondary dark:text-white hover:text-[#3ea1fd] hover:scale-105 dark:hover:text-[#dfd9ff] text-[18px] font-medium cursor-pointer"}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -71,7 +69,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 onClick={() => setDarkMode(!darkMode)}
                 className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:scale-105 transition-transform"
               >
-                <BsFillMoonStarsFill size={20} color={darkMode ? "white" : "black"} />
+                {darkMode ? (
+                  <BsFillSunFill size={20} color="white" />
+                ) : (
+                  <BsFillMoonStarsFill size={20} color="black" />
+                )}
               </button>
             </li>
 

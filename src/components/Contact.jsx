@@ -59,7 +59,7 @@ return (
             <h2 className={`${styles.sectionHeadText} text-center`}>
               Let's Connect
             </h2>
-            <p className={`${styles.sectionSubText} text-base sm:text-lg`}>
+            <p className={`${styles.sectionSubText} text-base sm:text-lg mb-20`}>
               Ready to build something amazing together?
             </p>
 

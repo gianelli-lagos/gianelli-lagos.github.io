@@ -10,33 +10,33 @@ import { PinContainer } from "./ui/Pin";
 
 const Works = () => {
   return (
-    <div className="py-20">
+    <div>
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
           My Projects.
         </h2>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="flex flex-wrap items-center justify-center p-4 gap-20 mt-20">
         {projects.map((item) => (
           <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] mb-10"
             key={item.id}
           >
             <PinContainer
-              title={item.link}
+              title={item.link}a
               href={item.link}
             >
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[250px] mb-10">
                 <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                  className="relative w-full h-full overflow-hidden rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
                   <img
-                  src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
-                />
+                    src={item.img}
+                    alt="cover"
+                    className="w-full h-full object-cover z-10"
+                  />
 
                 </div>
               </div>
@@ -58,22 +58,22 @@ const Works = () => {
               {/* Tool Icons */}
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
+                  {item.iconLists.map((Icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
+                      style={{ transform: `translateX(-${5 * index + 2}px)` }}
+                      className="border border-[#3ea1fd]/30 dark:border-white/[.2] rounded-full 
+                                bg-[#e8f4ff] dark:bg-[#13162D] 
+                                lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      <Icon className="text-[#3ea1fd] dark:text-[#CBACF9] w-5 h-5" />
                     </div>
                   ))}
                 </div>
 
                 <div className="flex justify-center items-center">
                   <p className="text-babyblue dark:text-blue-110  flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
+                    See GitHub repository!
                   </p>
                   <FaLocationArrow className="ms-3 dark:text-[#CBACF9] text-blue-300" />
                 </div>
@@ -86,4 +86,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");

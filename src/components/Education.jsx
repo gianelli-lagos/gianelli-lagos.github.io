@@ -70,16 +70,20 @@ const Education = ({ darkMode }) => {
   const courses = [
     "Data Structures", "Algorithms", "Web Development", "Database Systems",
     "Software Engineering", "Linear Algebra", "Machine Learning",
-    "Intermediate Statistics", "Computer Architecture", "Probability Statistics", "Intro to QF", "Financial Tools & Tech"
+    "Intermediate Statistics", "Computer Architecture", "Probability Statistics", 
+    "Intro to QF", "Financial Tools & Tech", "Deep Learning", 
+    "DevOps", "Risk Management",
   ];
 
   const floatingPositions = [
-    { top: '10%', left: '15%' }, { top: '20%', right: '10%' },
+    { top: '10%', left: '15%' }, { top: '15%', right: '10%' },
     { top: '75%', left: '8%' }, { top: '85%', right: '15%' },
     { top: '15%', left: '5%' }, { top: '60%', right: '5%' },
     { top: '25%', left: '85%' }, { top: '45%', left: '12%' },
-    { top: '70%', right: '85%' }, { top: '35%', right: '20%' },
-    { top: '80%', left: '75%' }, { top: '50%', left: '88%' }
+    { top: '70%', right: '85%' }, { top: '35%', right: '15%' },
+    { top: '75%', left: '75%' }, { top: '50%', left: '88%' },
+    { top: '2%', left: '20%' }, { top: '10%', right: '20%' },
+    { top: '80%', left: '25%' }
   ];
 
   return (

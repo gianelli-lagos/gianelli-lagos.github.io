@@ -7,7 +7,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { meimage } from "../assets";
 
 const AboutCard = ({ index, children, className = "", darkMode }) => (
-  <Tilt className="xs:w-[350px] w-full">
+  <Tilt className="w-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.3, 0.75)}
       className={`w-full p-[1px] rounded-[20px] shadow-lg ${
@@ -36,9 +36,9 @@ const AboutCard = ({ index, children, className = "", darkMode }) => (
 
 const About = ({ darkMode }) => {
   const funFacts = [
-    "🎨 I create art in my spare time.",
-    "💪 I enjoy working out and blasting music!",
-    "🌍 I like learning languages.",
+    "🎨 I enjoy creating art in my free time.",
+    "💪 I stay active through working out and listening to music.",
+    "🌍 I like learning new languages and exploring different cultures.",
   ];
 
   return (
@@ -52,49 +52,83 @@ const About = ({ darkMode }) => {
         </h2>
       </motion.div>
 
-      <div className="mt-10 flex flex-wrap gap-8 justify-center">
-        {/* Picture Card */}
-        <AboutCard index={0} darkMode={darkMode}>
-          <div className="flex flex-col items-center">
-            <img
-              src={meimage}
-              alt="Myself"
-              className="bg-gradient-to-b from-blue-110 to-babyblue rounded-[20px] w-48 h-48 object-cover mb-4 border-2 border-navbar"
-            />
-            <h3 className="text-secondary dark:text-white100 text-[24px] font-bold text-center">
-              Gianelli Lagos
-            </h3>
-            <p className="text-babyblue dark:text-secondarydark text-[16px] text-center mt-2">
-              Software Developer
-            </p>
-          </div>
-        </AboutCard>
+      <div className="mt-10 grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
-        {/* About Me Info Card */}
-        <AboutCard index={1} darkMode={darkMode}>
-          <div className="flex flex-col h-full">
-            <h3 className="text-secondary dark:text-white100 text-[24px] font-bold text-center mb-6">
-              About Me
-            </h3>
-            <p className="text-secondary dark:text-white100 text-[16px] leading-[24px] text-center flex-grow flex items-center">
-              I am deeply passionate about technology, particularly in the realms of Computer Science, Artificial Intelligence, Machine Learning, and Quantitative Finance. Currently, I am a rising junior at Stevens Institute of Technology, where I am actively engaging in projects and coursework that fuel my enthusiasm for tech. I am eager to connect with like-minded individuals and contribute to advancements in the tech industry.
-            </p>
-          </div>
-        </AboutCard>
+        {/* LEFT SIDE :) */}
+        <div className="flex flex-col gap-8 lg:col-span-1">
 
-        {/* Fun Facts Card */}
-        <AboutCard index={2} darkMode={darkMode}>
-          <div className="flex flex-col h-full">
-            <h3 className="text-secondary dark:text-white100 text-[24px] font-bold text-center mb-6">
-              Fun Facts
-            </h3>
-            <div className="text-secondary dark:text-white100 flex-grow flex flex-col justify-center space-y-3 text-[14px] text-left">
-              {funFacts.map((fact, index) => (
-                <div key={index}>{fact}</div>
-              ))}
+          {/* Picture Card */}
+          <AboutCard index={0} darkMode={darkMode}>
+            <div className="flex flex-col items-center">
+              <img
+                src={meimage}
+                alt="Myself"
+                className="bg-gradient-to-b from-blue-110 to-babyblue rounded-[20px] w-44 h-44 object-cover mb-4 border-2 border-navbar"
+              />
+              <h3 className="text-secondary dark:text-white100 text-[22px] font-bold text-center">
+                Gianelli Lagos
+              </h3>
+              <p className="text-babyblue dark:text-secondarydark text-[15px] text-center mt-2">
+                Software Engineer
+              </p>
             </div>
-          </div>
-        </AboutCard>
+          </AboutCard>
+
+          {/* Fun Facts */}
+          <AboutCard index={2} darkMode={darkMode}>
+            <div className="flex flex-col h-full">
+              <h3 className="text-secondary dark:text-white100 text-[22px] font-bold text-center mb-6">
+                Fun Facts
+              </h3>
+
+              <div className="text-secondary dark:text-white100 flex flex-col space-y-3 text-[14px] text-left">
+                {funFacts.map((fact, index) => (
+                  <div key={index}>{fact}</div>
+                ))}
+              </div>
+            </div>
+          </AboutCard>
+        </div>
+
+        {/* RIGHT SIDE (WIDE ABOUT ME) */}
+        <div className="lg:col-span-3 mt-20">
+          <AboutCard index={1} darkMode={darkMode}>
+            <div className="flex flex-col h-full">
+              <h3 className="text-secondary dark:text-white100 text-[26px] font-bold text-center mb-6">
+                Profile Summary 
+              </h3>
+
+              <p className="text-secondary dark:text-white100 text-[16px] leading-[28px] text-left">
+                I am a Computer Science student at Stevens Institute of Technology with
+                software engineering internship experience at Amazon (AWS), along with
+                participation in AI-focused programs such as Break Through Tech. Through
+                these experiences, I have built a strong foundation in algorithms,
+                programming, and software engineering principles.
+
+                <br /><br />
+
+                I have also explored quantitative finance concepts through implementations
+                such as the Black-Scholes option pricing model in R, which deepened my
+                understanding of numerical methods and computational modeling. In addition,
+                I continue to build full-stack and systems-oriented projects involving data
+                structures, backend development, and cloud-based applications.
+
+                <br /><br />
+
+                I am currently focused on strengthening my software engineering skills while
+                building projects in machine learning and artificial intelligence through
+                coursework and personal exploration.
+
+                <br /><br />
+                </p>
+
+                <p className="text-[#3ea1fd] dark:text-[#dfd9ff] font-semibold border-t border-[#3ea1fd]/20 pt-4 mt-4 text-center">
+                  Feel free to connect — I'm always open to discussing technology, projects, and new opportunities.
+                  <br /><br />
+                </p>
+            </div>
+          </AboutCard>
+        </div>
       </div>
     </>
   );

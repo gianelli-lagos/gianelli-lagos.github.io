@@ -26,11 +26,17 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import r from "./tech/r.png";
 
-import coming_soon from "./coming_soon.png";
+import coming_soon from "./projects/coming_soon.png";
+import habittracker from "./projects/habittracker.jpg";
+import RAG_chatbot from "./projects/RAG_chatbot.png";
+import WiDS_datathon from "./projects/WiDS_datathon_2025.png";
+import lecture_notes_converter from "./projects/lecture_notes_converter.png";
 
 import dxc from "./company/dxc.png";
 import btt from "./company/btt.png";
+
 
 export {
   logo,
@@ -42,6 +48,7 @@ export {
   css,
   python,
   cpp,
+  r,
   java,
   github,
   docker,
@@ -59,6 +66,10 @@ export {
   typescript,
   threejs,
   coming_soon,
+  habittracker,
+  RAG_chatbot,
+  WiDS_datathon,
+  lecture_notes_converter,
   meimage,
   dxc,
   btt,

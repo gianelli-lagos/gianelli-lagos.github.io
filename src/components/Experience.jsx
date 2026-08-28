@@ -4,6 +4,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
+import FloatingStar from "./FloatingStar";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -13,7 +14,6 @@ import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience, darkMode }) => {
-  console.log("Dark Mode:", darkMode);
   return (
     <VerticalTimelineElement
       /* Background Card Color */
@@ -27,8 +27,7 @@ const ExperienceCard = ({ experience, darkMode }) => {
         borderRight: darkMode ? "7px solid #1a2038" : "7px solid #E0F2FE",
       }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-      icon={
+      iconStyle={{ background: "#e8f4ff" }}      icon={
         /* Company Image */
         <div className="flex justify-center items-center w-full h-full">
           <img
@@ -86,6 +85,9 @@ const Experience = ({ darkMode }) => {
             />
           ))}
         </VerticalTimeline>
+
+        <FloatingStar id="star-exp" className="absolute top-25 left-10" />
+
       </div>
     </>
   );

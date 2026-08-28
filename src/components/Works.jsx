@@ -7,8 +7,9 @@ import { styles } from "../styles";
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "../constants";
 import { PinContainer } from "./ui/Pin";
+import FloatingStar from "./FloatingStar";
 
-const Works = () => {
+const Works = ({ darkMode }) => {
   return (
     <div>
         <p className={`${styles.sectionSubText} text-center`}>
@@ -24,7 +25,7 @@ const Works = () => {
             key={item.id}
           >
             <PinContainer
-              title={item.link}a
+              title={item.link}
               href={item.link}
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[250px] mb-10">
@@ -82,6 +83,7 @@ const Works = () => {
           </div>
         ))}
       </div>
+      <FloatingStar id="star-works" className="absolute top-50 right-20" />
     </div>
   );
 };

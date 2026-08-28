@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import FloatingStar from "./FloatingStar";
+
 // import Spline from '@splinetool/react-spline'; // for future use
 
-const Hero = () => {
+const Hero = ({ darkMode }) => {
   return (
     <section className="relative w-full h-screen mx-auto">
       {/* Optional Spline or background */}
@@ -17,6 +19,9 @@ const Hero = () => {
         <p className={`${styles.heroSubText} mt-4 text-[#64748b] dark:text-[#94a3b8]`}>
           I love problem solving. <br className="sm:block hidden" />
         </p>
+
+        <FloatingStar id="star-hero" className="absolute top-50 left-11" />
+
         <a href="#contact"> <button className="mt-10 px-6 py-3 rounded-full bg-[#3ea1fd] dark:bg-[#6366f1] text-white font-semibold text-[16px] hover:bg-[#2e82c9] dark:hover:bg-[#7c3aed] transition-colors duration-300"> Contact Me </button> </a>
       </div>
 

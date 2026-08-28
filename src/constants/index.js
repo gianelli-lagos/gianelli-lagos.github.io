@@ -24,7 +24,6 @@ import {
   RAG_chatbot,
   WiDS_datathon,
   lecture_notes_converter,
-  meimage,
   threejs,
   dxc,
   btt,

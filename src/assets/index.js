@@ -5,7 +5,12 @@ import close from "./close.svg";
 import gmail from "./gmail.webp";
 import linkedin from "./linkedin.png";
 
-import meimage from "./meimage.png";
+import me_hiking from "./me_hiking.png";
+import me_japan from "./me_japan.JPG";
+import me_SF from "./me_SF.JPG";
+import newyork_view from "./newyork_view.png";
+import myDrawingLight from "./GL_art_day.png";
+import myDrawingDark from "./GL_art_night.png";
 
 import css from "./tech/css.png";
 import python from "./tech/python.png";
@@ -70,7 +75,12 @@ export {
   RAG_chatbot,
   WiDS_datathon,
   lecture_notes_converter,
-  meimage,
+  me_hiking,
+  me_japan,
+  me_SF,
+  newyork_view,
   dxc,
   btt,
+  myDrawingLight,
+  myDrawingDark,
 };

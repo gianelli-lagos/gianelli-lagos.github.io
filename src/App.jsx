@@ -27,7 +27,7 @@ const App = () => {
             {/* <Feedbacks /> */}
             <div className='relative z-0'>
               <Contact darkMode={darkMode} />
-              <StarsCanvas />
+              <StarsCanvas darkMode={darkMode} />
               <Footer darkMode={darkMode} />
             </div>
           </div>

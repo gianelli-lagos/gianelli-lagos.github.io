@@ -7,7 +7,6 @@ import { styles } from "../styles";
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "../constants";
 import { PinContainer } from "./ui/Pin";
-import FloatingStar from "./FloatingStar";
 
 const Works = ({ darkMode }) => {
   return (
@@ -83,7 +82,6 @@ const Works = ({ darkMode }) => {
           </div>
         ))}
       </div>
-      <FloatingStar id="star-works" className="absolute top-50 right-20" />
     </div>
   );
 };

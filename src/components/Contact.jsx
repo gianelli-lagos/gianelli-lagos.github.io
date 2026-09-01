@@ -5,6 +5,7 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { styles } from "../styles";
 import { github_dark, linkedin, gmail } from "../assets";
+import FloatingStar from "./FloatingStar";
 
 const contactLinks = [
   {
@@ -133,6 +134,7 @@ return (
           </motion.div>
         </motion.div>
       </div>
+      <FloatingStar id="star-contact" className="absolute bottom-50 right-20" />
     </div>
   );
 };
